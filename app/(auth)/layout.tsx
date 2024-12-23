@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
+import '../globals.css';
 
 export const metadata: Metadata = {
 	title: 'Threads',
@@ -20,7 +21,7 @@ export default function RootLayout({
 					baseTheme: dark,
 				}}
 			>
-				<body>{children}</body>
+				<body className='bg-dark-1'>{children}</body>
 			</ClerkProvider>
 		</html>
 	);
